@@ -1,0 +1,36 @@
+html,
+body {
+  background-color: #eeeeee;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  margin: 0 20px 0 20px;
+  padding: 0;
+  height: 100%;
+}
+
+.text-style-reset {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.vignette {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.5) inset;
+}
+
+.placeholder {
+  visibility: hidden;
+  height: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
