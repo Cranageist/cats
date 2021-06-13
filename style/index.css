@@ -55,46 +55,17 @@ nav > .container {
   opacity: 20%;
 }
 
-.home-header,
-.home-socialIcons {
+.home-header {
   z-index: 1;
 }
 
 .home-header > h1 {
   margin: 10px;
-  font-size: 50px;
+  font-size: 100px;
 }
 
 .home-header > p {
   font-size: 20px;
-}
-
-.home-socialIcons > a {
-  font-size: 30px;
-  width: 1.6em;
-  height: 1.3em;
-  text-align: center;
-  padding-top: 0.3em;
-  margin: 20px;
-  border-radius: 50%;
-  color: #eeeeee;
-}
-
-.home-socialIcons > a:hover {
-  opacity: 80%;
-}
-
-.fa-github {
-  background: rgb(23, 21, 21);
-}
-
-.fa-instagram {
-  background: linear-gradient(
-    135deg,
-    rgba(195, 42, 163, 1) 10%,
-    rgba(244, 111, 48, 1) 40%,
-    rgba(114, 50, 189, 1) 80%
-  );
 }
 
 /* END OF HOME SECTION */
@@ -132,6 +103,9 @@ nav > .container {
   flex-direction: column;
   align-items: center;
 }
+.webApp-header {
+  font-size: 40px;
+}
 
 .webApp-applicationWindow {
   width: 100%;
@@ -143,18 +117,38 @@ nav > .container {
 
 .card {
   width: 17%;
+  background: white;
   height: min-content;
   border: 1px solid black;
   border-radius: 5px;
+  margin-bottom: 20px;
   box-shadow: 5px 5px 5px #393e46;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-face {
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.card-description {
+  position: absolute;
+  visibility: hidden;
+  width: 70%;
+  font-size: 20px;
+  text-align: justify;
+  text-align-last: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .card-header {
   padding: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .card-imageHolder {
@@ -178,6 +172,29 @@ nav > .container {
 .card-footer {
   padding: 20px;
   font-size: 20px;
+}
+
+@keyframes expand {
+  0% {
+    width: 17%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.expanded {
+  order: -1;
+  animation: expand 1s linear both;
+}
+
+.expanded > .card-face {
+  width: 17%;
+}
+
+.expanded > .card-description {
+  position: relative;
+  visibility: visible;
 }
 
 /* END OF WEBAPP SECTION */
